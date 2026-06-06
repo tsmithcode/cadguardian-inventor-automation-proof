@@ -14,14 +14,13 @@ reports/quickstart-report.json
 
 The report must include:
 
-- `Status`: review-ready or review-required.
+- `Status`: `ready-for-private-sample` or `needs-review`.
+- `BusinessImpact`: why this kit exists.
 - `Fixtures`: approved public fixture receipts with size and SHA-256.
-- `Checks`: validation checks tied to the workflow.
-- `ApiSignals`: the native/API vocabulary this kit is prepared to discuss.
+- `ParetoChecks`: checks tied to the first valuable automation slice.
+- `ReusableRoutines`: the small code patterns meant to be adapted.
+- `ApiSignals`: native/API vocabulary for the next technical conversation.
 
-Expected outputs for this kit:
+Expected first decision:
 
-- property-map
-- BOM-readiness-report
-- fixture receipts
-- native adapter notes
+Pick one product-family output, name required iProperties and BOM rows, then prove one DrawingDocument handoff.

@@ -12,7 +12,8 @@ const runtimeHints = [
   "Sheet",
   "iLogic",
   "VB.NET",
-  "Content Center"
+  "Content Center",
+  "Vault"
 ];
 const commonLocalHints = [
   "/Applications/Autodesk",
@@ -24,6 +25,6 @@ const commonLocalHints = [
 const visibleHints = commonLocalHints.filter((path) => existsSync(path));
 
 console.log("Inventor Automation and Drawing Output Quick-Start Kit");
-console.log("API/native vocabulary:", runtimeHints.join(", "));
+console.log("Native/API vocabulary:", runtimeHints.join(", "));
 console.log("Visible local runtime hints:", visibleHints.length > 0 ? visibleHints.join(", ") : "none detected");
 console.log("Public quickstart is runnable without licensed CAD. Native adapters require the matching local CAD/runtime environment.");

@@ -1,14 +1,25 @@
 import { execFileSync } from "node:child_process";
 import { existsSync } from "node:fs";
 
-const required = ["README.md", "quickstart/Program.cs", "docs/STAR.md", "docs/API_WALKTHROUGH.md", "fixtures/public"];
+const required = [
+  "README.md",
+  "quickstart/Program.cs",
+  "quickstart/quickstart.csproj",
+  "docs/STAR.md",
+  "docs/USER_GUIDE.md",
+  "docs/RUNTIME_GUIDE.md",
+  "docs/API_REFERENCES.md",
+  "docs/EXPECTED_OUTCOME.md",
+  "fixtures/public",
+  "native/ilogic/PackageReadinessRule.vb",
+  "native/inventor-dotnet/InventorPackageAudit.cs"
+];
 const missing = required.filter((file) => !existsSync(file));
 
 console.log("Inventor Automation and Drawing Output Quick-Start Kit");
-console.log("Kit type: CAD Guardian quick-start automation kit");
-console.log("C# quickstart: quickstart/");
-console.log("Native examples: optional licensed runtime adapters");
-console.log("Development preview: This CAD library is in development. This is an early public preview for feedback on the best business case, workflow shape, and proof path.");
+console.log("Kit type: CAD Guardian Pareto quick-start automation kit");
+console.log("Business impact: " + "Turn repeated Inventor model, iProperty, BOM, Content Center, and drawing-output pain into a package check before any add-in, iLogic rule, or Vault handoff expands.");
+console.log("Development preview: " + "This CAD library is in development. This is an early public preview for feedback on the best business case, workflow shape, and proof path.");
 
 try {
   const dotnet = execFileSync("dotnet", ["--version"], { encoding: "utf8" }).trim();

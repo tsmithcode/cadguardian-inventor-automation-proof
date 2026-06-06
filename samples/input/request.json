@@ -1,0 +1,17 @@
+{
+  "requestId": "cadg-inventor-demo-001",
+  "productFamily": "demo-bracket-family",
+  "runtimeDecision": "Inventor API adapter with iLogic rule inventory and BOM export validation.",
+  "expectedOutputs": [
+    "property map",
+    "BOM extract",
+    "drawing package manifest",
+    "release note"
+  ],
+  "validationRules": [
+    "required iProperties present",
+    "BOM rows reconcile",
+    "Content Center assumptions listed",
+    "drawing package named"
+  ]
+}

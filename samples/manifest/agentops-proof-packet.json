@@ -1,0 +1,43 @@
+{
+  "schemaVersion": "cadg.public_proof_packet.1",
+  "repo": "tsmithcode/cadguardian-inventor-automation-proof",
+  "title": "Inventor Automation and Drawing Output Proof",
+  "servicePath": "https://www.cadguardian.com/services/inventor-automation",
+  "story": "An engineering team needs one repeatable Inventor package path: model properties, drawing output, BOM rows, Content Center assumptions, and reviewer evidence.",
+  "workflow": [
+    "Product family request",
+    "Model and iProperty contract",
+    "Inventor API adapter",
+    "BOM/export fixture",
+    "Drawing package manifest",
+    "Content Center assumption log",
+    "Reviewer notes",
+    "Pilot decision"
+  ],
+  "stack": [
+    "Inventor API",
+    "iLogic",
+    "IPT/IAM/IDW",
+    "Content Center",
+    "Vault",
+    "BOM"
+  ],
+  "publicBoundary": "Public packet contains synthetic fixtures, source manifests, code scaffolds, and validation posture only.",
+  "agentOpsPolicy": {
+    "noSourceMutation": true,
+    "noCloudUploadOfRawCad": true,
+    "rawCadBinariesToAi": false,
+    "catalogOnlyFormats": [
+      ".dgn",
+      ".dwg",
+      ".iam",
+      ".idw",
+      ".ipt",
+      ".rfa",
+      ".rvt",
+      ".sldasm",
+      ".slddrw",
+      ".sldprt"
+    ]
+  }
+}

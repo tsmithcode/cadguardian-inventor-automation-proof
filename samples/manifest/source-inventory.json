@@ -1,0 +1,21 @@
+{
+  "policy": "NIST unrestricted Inventor PMI model references stay catalog-controlled. This repo includes generated property and BOM fixtures, not native IPT/IAM files.",
+  "filesAreBundled": false,
+  "reason": "AgentOps policy blocks raw CAD cloud upload. Public proof references approved library sources and uses synthetic fixtures.",
+  "sources": [
+    {
+      "sourceId": "nist_ftc_ctc_pmi_cad_models",
+      "relativePath": "raw/nist_ftc_ctc_pmi_cad_models/NIST-FTC-CTC-PMI-CAD-models/Inventor 2021/INV_nist_ctc_01_asme1_2021.ipt",
+      "format": "IPT",
+      "usage": "Catalog-only native Inventor model reference.",
+      "publicUse": "No geometry claim without local tool receipt."
+    },
+    {
+      "sourceId": "nist_ftc_ctc_pmi_cad_models",
+      "relativePath": "raw/nist_ftc_ctc_pmi_cad_models/NIST-FTC-CTC-PMI-CAD-models/CTC Definitions/nist_ctc_01_asme1_rd.stp",
+      "format": "STEP",
+      "usage": "Metadata-first STEP reference for public proof discussion.",
+      "publicUse": "Reference only."
+    }
+  ]
+}

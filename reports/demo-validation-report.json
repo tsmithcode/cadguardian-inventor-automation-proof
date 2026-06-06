@@ -1,33 +1,49 @@
 {
-  "requestId": "cadg-inventor-demo-001",
-  "runtimeDecision": "Inventor API adapter with iLogic rule inventory and BOM export validation.",
+  "requestId": "cadg-inventor-kit-001",
+  "kitType": "CAD Guardian quick-start automation kit",
+  "repo": "tsmithcode/cadguardian-inventor-automation-proof",
+  "runtimeDecision": "Use C# for fixture/package validation, Inventor API for document operations, and iLogic/VB.NET for rule-level model behavior.",
+  "apiSignals": [
+    "Inventor.Application",
+    "Document",
+    "PartDocument",
+    "AssemblyDocument",
+    "DrawingDocument",
+    "PropertySets",
+    "BOM",
+    "BOMView",
+    "Sheet",
+    "iLogic",
+    "VB.NET",
+    "Content Center"
+  ],
   "expectedOutputs": [
-    "property map",
-    "BOM extract",
-    "drawing package manifest",
-    "release note"
+    "property-map",
+    "BOM-readiness-report",
+    "fixture receipts",
+    "native adapter notes"
   ],
   "validation": [
     {
-      "rule": "required iProperties present",
+      "rule": "Inventor and STEP fixtures are present and attributed",
       "status": "review-ready",
-      "evidence": "Synthetic fixture only. Run local CAD checks against AgentOps-approved source files for tool receipts."
+      "evidence": "Public quick-start kit fixture, API walkthrough, or native adapter example is present."
     },
     {
-      "rule": "BOM rows reconcile",
+      "rule": "STEP fixture exposes ISO-10303 model exchange markers",
       "status": "review-ready",
-      "evidence": "Synthetic fixture only. Run local CAD checks against AgentOps-approved source files for tool receipts."
+      "evidence": "Public quick-start kit fixture, API walkthrough, or native adapter example is present."
     },
     {
-      "rule": "Content Center assumptions listed",
+      "rule": "iProperty and BOM readiness checks are represented",
       "status": "review-ready",
-      "evidence": "Synthetic fixture only. Run local CAD checks against AgentOps-approved source files for tool receipts."
+      "evidence": "Public quick-start kit fixture, API walkthrough, or native adapter example is present."
     },
     {
-      "rule": "drawing package named",
+      "rule": "iLogic/VB.NET and Inventor API handoff is documented",
       "status": "review-ready",
-      "evidence": "Synthetic fixture only. Run local CAD checks against AgentOps-approved source files for tool receipts."
+      "evidence": "Public quick-start kit fixture, API walkthrough, or native adapter example is present."
     }
   ],
-  "publicBoundary": "No private client files, login material, raw opportunity notes, or catalog-only native CAD binaries are included."
+  "publicBoundary": "No private client files, login material, raw opportunity notes, or license-uncertain CAD assets are included."
 }

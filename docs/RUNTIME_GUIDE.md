@@ -1,33 +1,16 @@
 # Runtime Guide
 
-## Default public runtime
+## Public runtime
 
-The default runtime is Node.js plus synthetic fixtures:
+- Node.js for repo verification and synthetic demo.
+- .NET 10 for the C# quickstart.
+- No licensed CAD software required.
 
-```bash
-npm run doctor
-npm run verify
-npm run demo
-```
+## Optional native runtime
 
-Expected output: `reports/demo-validation-report.json`.
+Use C# for fixture/package validation, Inventor API for document operations, and iLogic/VB.NET for rule-level model behavior.
 
-## Optional native/runtime path
+## Native/API examples
 
-Run:
-
-```bash
-npm run runtime:check
-```
-
-This command only reports visible local runtime hints. It does not prove CAD execution.
-
-## Runtime decision for this proof
-
-Inventor API adapter with iLogic rule inventory and BOM export validation.
-
-## AgentOps boundary
-
-NIST unrestricted Inventor PMI model references stay catalog-controlled. This repo includes generated property and BOM fixtures, not native IPT/IAM files.
-
-Native CAD files, private client material, credentials, source-system exports, and raw opportunity notes stay outside this public repo.
+- native/inventor-dotnet/InventorPackageAudit.cs
+- native/ilogic/PackageReadinessRule.vb

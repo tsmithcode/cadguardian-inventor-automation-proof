@@ -1,0 +1,84 @@
+{
+  "Status": "review-ready",
+  "Repo": "tsmithcode/cadguardian-inventor-automation-proof",
+  "Title": "Inventor Automation and Drawing Output Quick-Start Kit",
+  "Situation": "An engineering team repeats Inventor model, iProperty, drawing, BOM, and package-output work, but manual steps keep leaking time.",
+  "Task": "Create a public-safe quickstart that proves the model/package contract before a native Inventor API or iLogic adapter is used.",
+  "Action": "Bundle approved NIST IPT/STEP fixtures, validate package metadata, represent BOM and iProperty rules, and show C#, iLogic, and VB.NET adapter examples.",
+  "Result": "Reviewers can run the public kit, see package readiness, and discuss the native Inventor automation path without private models.",
+  "ApiSignals": [
+    "Inventor.Application",
+    "Document",
+    "PartDocument",
+    "AssemblyDocument",
+    "DrawingDocument",
+    "PropertySets",
+    "BOM",
+    "BOMView",
+    "Sheet",
+    "iLogic",
+    "VB.NET",
+    "Content Center"
+  ],
+  "Fixtures": [
+    {
+      "Path": "fixtures/public/nist/INV_nist_ctc_01_asme1_2021.ipt",
+      "SourceId": "nist_ftc_ctc_pmi_cad_models",
+      "SizeBytes": 492544,
+      "Sha256": "c3716769b86d5fb7db9b65fa4c785c0f98db92258af0a801d544ab7d83251ec3",
+      "TextReadable": false,
+      "TokensFound": [],
+      "TokensMissing": [],
+      "Use": "Native Inventor package-presence fixture.",
+      "Attribution": "NIST MBE PMI test case model",
+      "License": "NIST unrestricted test case material; no endorsement implied"
+    },
+    {
+      "Path": "fixtures/public/nist/nist_ctc_01_asme1_rd.stp",
+      "SourceId": "nist_ftc_ctc_pmi_cad_models",
+      "SizeBytes": 235156,
+      "Sha256": "bd5a73c58880ba9093f8dc653c87f4224d6a795459e7fb64f6fdc22ba76a02d3",
+      "TextReadable": true,
+      "TokensFound": [
+        "ISO-10303",
+        "HEADER"
+      ],
+      "TokensMissing": [],
+      "Use": "Public text-readable STEP metadata fixture.",
+      "Attribution": "NIST MBE PMI STEP reference",
+      "License": "NIST unrestricted test case material; no endorsement implied"
+    }
+  ],
+  "Checks": [
+    {
+      "Rule": "Inventor and STEP fixtures are present and attributed",
+      "Status": "review-ready",
+      "Evidence": "Public fixture and API walkthrough evidence is present."
+    },
+    {
+      "Rule": "STEP fixture exposes ISO-10303 model exchange markers",
+      "Status": "review-ready",
+      "Evidence": "Public fixture and API walkthrough evidence is present."
+    },
+    {
+      "Rule": "iProperty and BOM readiness checks are represented",
+      "Status": "review-ready",
+      "Evidence": "Public fixture and API walkthrough evidence is present."
+    },
+    {
+      "Rule": "iLogic/VB.NET and Inventor API handoff is documented",
+      "Status": "review-ready",
+      "Evidence": "Public fixture and API walkthrough evidence is present."
+    },
+    {
+      "Rule": "fixture: fixtures/public/nist/INV_nist_ctc_01_asme1_2021.ipt",
+      "Status": "sample-pass",
+      "Evidence": "sha256 c3716769b86d / 492544 bytes"
+    },
+    {
+      "Rule": "fixture: fixtures/public/nist/nist_ctc_01_asme1_rd.stp",
+      "Status": "sample-pass",
+      "Evidence": "sha256 bd5a73c58880 / 235156 bytes"
+    }
+  ]
+}

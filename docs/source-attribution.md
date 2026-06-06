@@ -1,6 +1,6 @@
 # Source Attribution
 
-NIST unrestricted Inventor PMI model references stay catalog-controlled. This repo includes generated property and BOM fixtures, not native IPT/IAM files.
+This CAD library is in development. This is an early public preview for feedback on the best business case, workflow shape, and proof path.
 
-- nist_ftc_ctc_pmi_cad_models: raw/nist_ftc_ctc_pmi_cad_models/NIST-FTC-CTC-PMI-CAD-models/Inventor 2021/INV_nist_ctc_01_asme1_2021.ipt (IPT)
-- nist_ftc_ctc_pmi_cad_models: raw/nist_ftc_ctc_pmi_cad_models/NIST-FTC-CTC-PMI-CAD-models/CTC Definitions/nist_ctc_01_asme1_rd.stp (STEP)
+- `fixtures/public/nist/INV_nist_ctc_01_asme1_2021.ipt`: NIST MBE PMI test case model; NIST unrestricted test case material; no endorsement implied; source `nist_ftc_ctc_pmi_cad_models/NIST-FTC-CTC-PMI-CAD-models/Inventor 2021/INV_nist_ctc_01_asme1_2021.ipt`; SHA-256 `c3716769b86d5fb7db9b65fa4c785c0f98db92258af0a801d544ab7d83251ec3`.
+- `fixtures/public/nist/nist_ctc_01_asme1_rd.stp`: NIST MBE PMI STEP reference; NIST unrestricted test case material; no endorsement implied; source `nist_ftc_ctc_pmi_cad_models/NIST-FTC-CTC-PMI-CAD-models/CTC Definitions/nist_ctc_01_asme1_rd.stp`; SHA-256 `bd5a73c58880ba9093f8dc653c87f4224d6a795459e7fb64f6fdc22ba76a02d3`.

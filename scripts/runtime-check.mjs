@@ -1,12 +1,18 @@
 import { existsSync } from "node:fs";
 
 const runtimeHints = [
-  "Inventor API",
+  "Inventor.Application",
+  "Document",
+  "PartDocument",
+  "AssemblyDocument",
+  "DrawingDocument",
+  "PropertySets",
+  "BOM",
+  "BOMView",
+  "Sheet",
   "iLogic",
-  "IPT/IAM/IDW",
-  "Content Center",
-  "Vault",
-  "BOM"
+  "VB.NET",
+  "Content Center"
 ];
 const commonLocalHints = [
   "/Applications/Autodesk",
@@ -15,10 +21,9 @@ const commonLocalHints = [
   "C:/Program Files/SOLIDWORKS Corp",
   "C:/Program Files/Bentley",
 ];
-
 const visibleHints = commonLocalHints.filter((path) => existsSync(path));
 
-console.log("Inventor Automation and Drawing Output Proof");
-console.log("Runtime vocabulary:", runtimeHints.join(", "));
+console.log("Inventor Automation and Drawing Output Quick-Start Kit");
+console.log("API/native vocabulary:", runtimeHints.join(", "));
 console.log("Visible local runtime hints:", visibleHints.length > 0 ? visibleHints.join(", ") : "none detected");
-console.log("This check does not prove CAD execution. Native geometry, conversion, repair, or API execution requires a separate local tool receipt.");
+console.log("Public quickstart is runnable without licensed CAD. Native adapters require the matching local CAD/runtime environment.");

@@ -1,0 +1,29 @@
+[
+  {
+    "source": "nist_ftc_ctc_pmi_cad_models/NIST-FTC-CTC-PMI-CAD-models/Inventor 2021/INV_nist_ctc_01_asme1_2021.ipt",
+    "destination": "fixtures/public/nist/INV_nist_ctc_01_asme1_2021.ipt",
+    "sourceId": "nist_ftc_ctc_pmi_cad_models",
+    "license": "NIST unrestricted test case material; no endorsement implied",
+    "attribution": "NIST MBE PMI test case model",
+    "use": "Native Inventor package-presence fixture.",
+    "tokens": [],
+    "bundledPath": "fixtures/public/nist/INV_nist_ctc_01_asme1_2021.ipt",
+    "sizeBytes": 492544,
+    "sha256": "c3716769b86d5fb7db9b65fa4c785c0f98db92258af0a801d544ab7d83251ec3"
+  },
+  {
+    "source": "nist_ftc_ctc_pmi_cad_models/NIST-FTC-CTC-PMI-CAD-models/CTC Definitions/nist_ctc_01_asme1_rd.stp",
+    "destination": "fixtures/public/nist/nist_ctc_01_asme1_rd.stp",
+    "sourceId": "nist_ftc_ctc_pmi_cad_models",
+    "license": "NIST unrestricted test case material; no endorsement implied",
+    "attribution": "NIST MBE PMI STEP reference",
+    "use": "Public text-readable STEP metadata fixture.",
+    "tokens": [
+      "ISO-10303",
+      "HEADER"
+    ],
+    "bundledPath": "fixtures/public/nist/nist_ctc_01_asme1_rd.stp",
+    "sizeBytes": 235156,
+    "sha256": "bd5a73c58880ba9093f8dc653c87f4224d6a795459e7fb64f6fdc22ba76a02d3"
+  }
+]

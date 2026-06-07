@@ -1,78 +1,102 @@
 <p align="left">
-  <a href="https://www.cadguardian.com/">
+  <a href="https://www.cadguardian.com/services/inventor-automation">
     <img src="assets/cad-guardian-logo-highlighted.png" alt="CAD Guardian logo" width="120">
   </a>
 </p>
 
-# Inventor Automation and Drawing Output Quick-Start Kit
+# Inventor Automation and Drawing Output
 
-CAD Guardian Pareto quick-start automation kit for drafters, CAD automation peers, technical interviews, and buyer-facing business-case discussions.
+Enterprise proof asset for evaluating whether an Autodesk Inventor automation engagement should start with package readiness, iProperty/BOM checks, drawing output, iLogic/VB.NET rules, or a native Inventor API/Vault handoff.
 
-> This CAD library is in development. This is an early public preview for feedback on the best business case, workflow shape, and proof path.
+Service lane: [CAD Guardian Inventor Automation](https://www.cadguardian.com/services/inventor-automation)
 
-## Live site
+Live proof page: [GitHub Pages](https://tsmithcode.github.io/cadguardian-inventor-automation-proof/) | [Download ZIP](https://github.com/tsmithcode/cadguardian-inventor-automation-proof/archive/refs/heads/main.zip) | [CAD Guardian](https://www.cadguardian.com/) | [TSmithCode.ai](https://www.tsmithcode.ai/)
 
-- GitHub Pages: https://tsmithcode.github.io/cadguardian-inventor-automation-proof/
-- Download ZIP: https://github.com/tsmithcode/cadguardian-inventor-automation-proof/archive/refs/heads/main.zip
-- CAD Guardian: https://www.cadguardian.com/
-- TSmithCode.ai: https://www.tsmithcode.ai/
-- Service page: https://www.cadguardian.com/services/inventor-automation
+## Best for
 
-## Why this exists
+- Manufacturing, drafting, and CAD automation teams that repeat Inventor model, iProperty, BOM, Content Center, and drawing-output checks.
+- Evaluators who need public evidence before sharing private models, drawings, credentials, or Vault context.
+- Technical reviewers deciding whether the first useful slice belongs in C#, iLogic/VB.NET, Inventor API code, or a Vault-connected workflow.
 
-Turn repeated Inventor model, iProperty, BOM, Content Center, and drawing-output pain into a package check before any add-in, iLogic rule, or Vault handoff expands.
+## Decision this proves
 
-## Fast run
+This repo proves whether the package contract is clear enough to justify native Inventor automation work.
+
+Run it to answer:
+
+- Are approved public IPT/STEP fixtures present and receipted?
+- Are the first Pareto checks visible before document mutation begins?
+- Are iProperty, BOM, Content Center, drawing output, and Vault handoff assumptions named?
+- Is the boundary between public validation and licensed Inventor runtime work explicit?
+
+## Run locally
 
 ```bash
 npm run doctor
 npm run verify
 npm run demo
-dotnet build quickstart
+npm run quickstart:build
+npm run sanitize
 ```
 
-`npm run demo` runs the C# quickstart and writes `reports/quickstart-report.json`.
+The package script names are intentionally unchanged. `npm run demo` runs the C# quickstart through `dotnet run --project quickstart`, and `npm run quickstart:build` runs the matching build gate.
 
-## What is worth reusing
+## Expected output
 
-- `quickstart/Program.cs`: a small C# package-readiness engine with fixture receipts, Pareto checks, native runtime gates, and a JSON report.
-- `native/`: optional API/runtime examples for the licensed CAD environment.
-- `fixtures/public/`: approved public CAD fixtures only.
-- `docs/USER_GUIDE.md`: how to run and adapt the kit.
-- `docs/INTERVIEW_SCRIPT.md`: how to explain the business case without guessing.
+`npm run demo` runs the C# quickstart and writes:
 
-## STAR story
+```text
+reports/quickstart-report.json
+```
 
-**Situation:** An engineering team repeats Inventor model, iProperty, drawing, BOM, and package-output work, but manual steps keep leaking time.
+The report includes fixture receipts, SHA-256 hashes, reusable routines, Pareto checks, API signals, and a status of `ready-for-private-sample` or `needs-review`.
 
-**Task:** Prove the model/package contract before a native Inventor API or iLogic adapter is used.
+## Proof boundary
 
-**Action:** Bundle public IPT/STEP fixtures, validate package metadata, represent BOM and iProperty checks, and show C#, iLogic, and VB.NET handoff examples.
+This is a public proof repo, not a production Inventor add-in. It validates the package-readiness layer that should exist before trusted CAD files are touched by native automation.
 
-**Result:** A reviewer can run the kit, see package readiness, and decide whether Inventor API, iLogic, or Vault work is the right first slice.
+The proof shows:
 
-## Pareto checks
+- Public fixture inventory and receipts.
+- iProperty and BOM readiness checks represented as explicit rules.
+- Drawing output and `DrawingDocument` handoff vocabulary.
+- Content Center and Vault assumptions called out before scope expands.
+- Optional native examples for Inventor API, iLogic, and VB.NET conversations.
 
-- **Model package inventory:** Separates public package validation from native Inventor document mutation. Handoff: `Inventor.Application`, `Document`, `PartDocument`, and `AssemblyDocument`.
-- **iProperty and BOM readiness:** Names the fields and rows that decide whether automation saves time or creates downstream corrections. Handoff: `PropertySets`, `BOM`, `BOMView`, Content Center assumptions, and Vault ownership.
-- **iLogic / VB.NET rule boundary:** Keeps rule automation near the model behavior users already trust instead of turning it into a broad platform rewrite. Handoff: iLogic/VB.NET rule first, Inventor API add-in only when document scope is proven.
+## What to send
 
-## API and runtime signals
+For an evaluator review, send:
 
-- Inventor.Application
-- Document
-- PartDocument
-- AssemblyDocument
-- DrawingDocument
-- PropertySets
-- BOM
-- BOMView
-- Sheet
-- iLogic
-- VB.NET
-- Content Center
-- Vault
+- This GitHub repo link.
+- `reports/quickstart-report.json` after `npm run demo`.
+- The service page: [CAD Guardian Inventor Automation](https://www.cadguardian.com/services/inventor-automation)
+- One sentence naming the private product-family output you want automated next.
+
+Do not send private drawings, credentials, raw opportunity notes, client names, or unapproved CAD fixtures in the public repo.
+
+## Related CAD Guardian page
+
+[Inventor Automation Service](https://www.cadguardian.com/services/inventor-automation)
+
+Use that page for the buyer-facing service context. Use this repo for runnable proof that the engagement can start with a bounded package decision.
+
+## Native runtime boundary
+
+The default kit runs with local .NET and does not require licensed CAD software.
+
+Native Inventor execution belongs inside the matching licensed CAD environment after this package boundary is proven. The handoff points are:
+
+- `Inventor.Application`, `Document`, `PartDocument`, and `AssemblyDocument` for model package inventory.
+- `PropertySets`, `BOM`, and `BOMView` for iProperty and BOM readiness.
+- `DrawingDocument` and `Sheet` for drawing output.
+- iLogic/VB.NET rule examples for model behavior close to the user workflow.
+- Vault handoff only after ownership, release state, and package scope are clear.
 
 ## Public fixture boundary
 
-Only approved public sample files are bundled. No client files, private drawings, credentials, raw opportunity notes, or license-uncertain CAD assets are included.
+Only approved public sample files are bundled:
+
+- `fixtures/public/nist/INV_nist_ctc_01_asme1_2021.ipt`
+- `fixtures/public/nist/nist_ctc_01_asme1_rd.stp`
+
+No private names, credentials, private drawings, raw opportunity notes, client CAD files, license-uncertain assets, or unapproved CAD fixtures belong in this repository.

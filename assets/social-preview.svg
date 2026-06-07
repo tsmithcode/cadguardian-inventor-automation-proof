@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="640" viewBox="0 0 1280 640" role="img" aria-labelledby="title desc">
+  <title id="title">CAD Guardian Inventor Automation and Drawing Output proof preview</title>
+  <desc id="desc">Branded social preview for a public proof repo with service lane, proof decision, and run command.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#071114"/>
+      <stop offset="0.52" stop-color="#0d1722"/>
+      <stop offset="1" stop-color="#11151c"/>
+    </linearGradient>
+    <linearGradient id="rail" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#29d0c2"/>
+      <stop offset="1" stop-color="#f4c95d"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="18" stdDeviation="22" flood-color="#000000" flood-opacity="0.36"/>
+    </filter>
+  </defs>
+
+  <rect width="1280" height="640" fill="url(#bg)"/>
+  <rect x="56" y="54" width="1168" height="532" rx="28" fill="#111722" stroke="#2b3a49" filter="url(#shadow)"/>
+  <rect x="56" y="54" width="1168" height="10" fill="url(#rail)"/>
+
+  <g transform="translate(96 94)">
+    <rect x="0" y="0" width="116" height="116" rx="16" fill="#05070b" stroke="#29d0c2" stroke-opacity="0.68"/>
+    <path d="M58 20 L91 38 L91 78 L58 96 L25 78 L25 38 Z" fill="none" stroke="#29d0c2" stroke-width="7" stroke-linejoin="round"/>
+    <path d="M58 37 L76 47 L76 68 L58 78 L40 68 L40 47 Z" fill="#f4c95d"/>
+    <text x="144" y="34" fill="#29d0c2" font-family="Inter, Arial, sans-serif" font-size="24" font-weight="800" letter-spacing="4">CAD GUARDIAN</text>
+    <text x="144" y="78" fill="#f8fafc" font-family="Inter, Arial, sans-serif" font-size="46" font-weight="850">Inventor Automation</text>
+    <text x="144" y="124" fill="#f8fafc" font-family="Inter, Arial, sans-serif" font-size="46" font-weight="850">and Drawing Output</text>
+  </g>
+
+  <g transform="translate(96 272)">
+    <rect x="0" y="0" width="514" height="186" rx="18" fill="#0a1119" stroke="#263746"/>
+    <text x="28" y="46" fill="#93a4b7" font-family="Inter, Arial, sans-serif" font-size="22" font-weight="800">SERVICE LANE</text>
+    <text x="28" y="92" fill="#f4c95d" font-family="Inter, Arial, sans-serif" font-size="32" font-weight="850">Inventor Automation</text>
+    <text x="28" y="138" fill="#c7d2df" font-family="Inter, Arial, sans-serif" font-size="25">iProperty, BOM, Content Center,</text>
+    <text x="28" y="170" fill="#c7d2df" font-family="Inter, Arial, sans-serif" font-size="25">drawing output, Vault handoff</text>
+  </g>
+
+  <g transform="translate(646 272)">
+    <rect x="0" y="0" width="482" height="186" rx="18" fill="#0a1119" stroke="#29d0c2" stroke-opacity="0.42"/>
+    <text x="28" y="46" fill="#93a4b7" font-family="Inter, Arial, sans-serif" font-size="22" font-weight="800">PROOF DECISION</text>
+    <text x="28" y="92" fill="#f8fafc" font-family="Inter, Arial, sans-serif" font-size="30" font-weight="850">Is the package contract</text>
+    <text x="28" y="128" fill="#f8fafc" font-family="Inter, Arial, sans-serif" font-size="30" font-weight="850">ready for native Inventor</text>
+    <text x="28" y="164" fill="#f8fafc" font-family="Inter, Arial, sans-serif" font-size="30" font-weight="850">automation work?</text>
+  </g>
+
+  <g transform="translate(96 492)">
+    <rect x="0" y="0" width="1032" height="54" rx="14" fill="#081017" stroke="#394858"/>
+    <text x="26" y="36" fill="#29d0c2" font-family="SFMono-Regular, Consolas, monospace" font-size="25" font-weight="700">npm run doctor &amp;&amp; npm run verify &amp;&amp; npm run demo</text>
+  </g>
+
+  <text x="96" y="574" fill="#93a4b7" font-family="Inter, Arial, sans-serif" font-size="20">Public fixtures only. Native runtime boundary is explicit.</text>
+</svg>

@@ -1,6 +1,18 @@
 {
   "name": "cadguardian-inventor-automation-proof",
   "version": "3.0.0",
+  "description": "CAD Guardian public runnable Inventor automation evaluation kit for drawing output, BOM, iProperty, and workflow consulting.",
+  "keywords": [
+    "cadguardian",
+    "cad-automation",
+    "inventor",
+    "ilogic",
+    "vbnet",
+    "bom",
+    "drawing-automation",
+    "naics-541512",
+    "sic-7373"
+  ],
   "private": false,
   "type": "module",
   "scripts": {
